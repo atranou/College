@@ -10,9 +10,8 @@ import java.io.FileNotFoundException;
 import java.util.List;
 
 @RestController
-@RequestMapping("college")
 public class CollegeController {
-    @GetMapping("courses")
+    @GetMapping("college/courses")
     public List<Course> getCourses() {
         Service service = new Service();
         try {
