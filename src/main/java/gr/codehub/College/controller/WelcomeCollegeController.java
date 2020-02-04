@@ -10,10 +10,9 @@ import java.io.FileNotFoundException;
 import java.util.List;
 
 @Controller
-@RequestMapping("college")
 public class WelcomeCollegeController {
-    @GetMapping("")
-    public String WelcomePage(){
+    @GetMapping("college")
+    public String WelcomePage() {
         return "WelcomePage";
     }
 }
