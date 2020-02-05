@@ -11,13 +11,10 @@ import java.util.List;
 @RestController
 public class CollegeController {
     @GetMapping("college/courses")
-    public List<Course> getCourses() {
+    public List<Course> getCourses() throws FileNotFoundException {
         Service service = new Service();
-        try {
-            return service.getCourses("courses.csv");
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-            return null;
-        }
+        return service.getCourses("courses.csv");
+
     }
 }
+
